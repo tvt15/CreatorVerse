@@ -21,7 +21,7 @@ const ShowCreators = () => {
         {creators.length > 0 ? (
           creators.map((creator) => (
             <article key={creator.id} className="creator-card">
-              <img src={creator.image_url} alt={creator.name} className="creator-image" />
+              <img src={creator.imageURL} alt={creator.name} className="creator-image" />
               <h3>{creator.name}</h3>
               <p>{creator.description}</p>
               <Link to={`/view/${creator.id}`} className="secondary">View</Link>
