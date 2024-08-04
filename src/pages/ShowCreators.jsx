@@ -15,24 +15,32 @@ const ShowCreators = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <h2>Content Creators</h2>
       <div className="grid">
         {creators.length > 0 ? (
           creators.map((creator) => (
             <article key={creator.id} className="creator-card">
-              <img src={creator.imageURL} alt={creator.name} className="creator-image" />
-              <h3>{creator.name}</h3>
-              <p>{creator.description}</p>
-              <Link to={`/view/${creator.id}`} className="secondary">View</Link>
-              <Link to={`/edit/${creator.id}`} className="secondary">Edit</Link>
-            </article>
+              <div className="creator-image-container">
+                <img src={creator.imageURL} alt={creator.name} className="creator-image" />
+              </div>
+              <div className="creator-info">
+                <div>
+                  <h3>{creator.name}</h3>
+                  <p>{creator.description}</p>
+                </div>
+                <div className="creator-buttons">
+                  <Link to={`/view/${creator.id}`} className="secondary">View</Link>
+                  <Link to={`/edit/${creator.id}`} className="secondary">Edit</Link>
+                </div>
+              </div>
+            </article>  
           ))
         ) : (
           <p>No creators found.</p>
         )}
       </div>
-    </div>
+    </>
   );
 };
 
