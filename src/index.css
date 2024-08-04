@@ -35,13 +35,61 @@ body {
   overflow-x: hidden;
 }
 
-header, footer {
+footer {
   padding: 1rem 5%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /* Ensure space between title and buttons */
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: #1a1a1a; /* Matte black background color */
+}
+
+.header-title {
+  flex: 1;
+  text-align: left; /* Or left/right as needed */
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1rem; /* Adjust the gap between buttons as needed */
+  margin-left: auto; /* Push buttons to the far right */
+}
+
+.header-buttons button {
+  background-color: transparent; /* Transparent background for a minimalistic look */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  padding: 0.3em 1em; /* Smaller padding for a more compact button */
+  font-size: 0.9em; /* Slightly smaller font size */
+  color: #646cff; /* Font color to match the theme */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.header-buttons button:hover {
+  background-color: #646cff; /* Background color on hover */
+  color: #ffffff; /* Font color on hover */
+  border: 1px solid #646cff; /* Show smaller border on hover */
+}
+
+.header-buttons button:focus,
+.header-buttons button:focus-visible {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.5); /* Smaller custom focus outline */
 }
 
 main {
   flex: 1;
   width: 100%;
+}
+.content-creators {
+  background-color: #333333; /* Dark gray background color */
+  padding: 1rem; /* Padding for spacing */
+  border-radius: 5px; /* Rounded corners */
+  color: #ffffff; /* White text color for better contrast */
 }
 
 /* Typography and links */

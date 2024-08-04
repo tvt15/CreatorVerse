@@ -16,7 +16,9 @@ const ShowCreators = () => {
 
   return (
     <>
+    <div className = "content-creators">
       <h2>Content Creators</h2>
+      </div>
       <div className="grid">
         {creators.length > 0 ? (
           creators.map((creator) => (
