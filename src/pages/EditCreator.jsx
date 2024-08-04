@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { supabase } from '../client';
+import '../index.css';
 
 const EditCreator = () => {
   const { id } = useParams();
@@ -39,8 +40,19 @@ const EditCreator = () => {
     navigate('/');
   };
 
+  const handleDelete = async () => {
+    const confirmation = window.confirm('Are you sure you want to delete this creator?');
+    if (confirmation) {
+      await supabase
+        .from('creators')
+        .delete()
+        .eq('id', id);
+      navigate('/');
+    }
+  };
+
   return (
-    <div>
+    <div className="form-container">
       <h1>Edit Creator</h1>
       <form onSubmit={handleSubmit}>
         <label>
@@ -59,7 +71,10 @@ const EditCreator = () => {
           Image URL (optional):
           <input type="url" name="imageURL" value={formData.imageURL} onChange={handleChange} />
         </label>
-        <button type="submit">Save Changes</button>
+        <div className="button-group">
+          <button type="submit">Save Changes</button>
+          <button type="button" className="delete-button" onClick={handleDelete}>Delete Creator</button>
+        </div>
       </form>
     </div>
   );

@@ -17,7 +17,8 @@ const ShowCreators = () => {
   return (
     <>
     <div className = "content-creators">
-      <h2>Content Creators</h2>
+      <h1>Content Creators</h1>
+      <p>Here are My Top 5 Content Creators that I love to watch in my freetime</p>
       </div>
       <div className="grid">
         {creators.length > 0 ? (

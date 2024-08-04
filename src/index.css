@@ -5,7 +5,7 @@
   font-weight: 400;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #1a1a1a;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -32,7 +32,7 @@ body {
   max-width: none;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  
 }
 
 footer {
@@ -41,53 +41,62 @@ footer {
 
 header {
   display: flex;
-  justify-content: space-between; /* Ensure space between title and buttons */
-  align-items: center;
+  justify-content: space-between;
+  align-items: center; /* Changed from 'left' to 'center' for better vertical alignment */
   padding: 1rem 5%;
-  background-color: #1a1a1a; /* Matte black background color */
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: add a subtle shadow for depth */
 }
 
 .header-title {
   flex: 1;
-  text-align: left; /* Or left/right as needed */
+  padding-top: 2%;
+  text-align: left;
 }
 
 .header-buttons {
   display: flex;
-  gap: 1rem; /* Adjust the gap between buttons as needed */
-  margin-left: auto; /* Push buttons to the far right */
+  gap: 1rem;
+  margin-left: auto;
 }
 
 .header-buttons button {
-  background-color: transparent; /* Transparent background for a minimalistic look */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners for a modern look */
-  padding: 0.3em 1em; /* Smaller padding for a more compact button */
-  font-size: 0.9em; /* Slightly smaller font size */
-  color: #646cff; /* Font color to match the theme */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3em 1em;
+  font-size: 0.9em;
+  color: #646cff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-buttons button:hover {
-  background-color: #646cff; /* Background color on hover */
-  color: #ffffff; /* Font color on hover */
-  border: 1px solid #646cff; /* Show smaller border on hover */
+  color: #ffffff;
+  border: 1px solid #646cff;
 }
 
 .header-buttons button:focus,
 .header-buttons button:focus-visible {
-  outline: none; /* Remove default focus outline */
-  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.5); /* Smaller custom focus outline */
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.5);
 }
-
 main {
   flex: 1;
   width: 100%;
 }
 .content-creators {
   background-color: #333333; /* Dark gray background color */
-  padding: 1rem; /* Padding for spacing */
+  padding: 5rem; /* Padding for spacing */
+  text-align: center;
   border-radius: 5px; /* Rounded corners */
   color: #ffffff; /* White text color for better contrast */
 }
@@ -160,8 +169,8 @@ button:focus-visible {
 
 .creator-image-container {
   flex: 1;
-  max-width: 50%;
-  min-height: 300px;
+  max-width: 40%;
+  min-height: 50px;
   padding: 0 5%;
 }
 
@@ -202,7 +211,7 @@ p {
 @media (prefers-color-scheme: dark) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    
   }
   a:hover {
     color: #747bff;
@@ -234,4 +243,81 @@ p {
   .creator-info {
     padding: 1rem;
   }
+}
+
+/* Form container */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form elements */
+form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #333; /* Dark text color */
+}
+
+form input[type="text"],
+form input[type="url"],
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Specific styles for the description textarea */
+form textarea {
+  resize: vertical; /* Allows the user to resize vertically */
+  max-width: 100%; /* Ensures the textarea does not exceed the form's width */
+  max-height: 200px; /* Sets a maximum height */
+}
+
+/* Button group */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+button[type="submit"],
+button.delete-button {
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+}
+
+button.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+button.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Dark text color for h1 */
+.form-container h1 {
+  color: #333;
 }
