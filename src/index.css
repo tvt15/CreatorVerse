@@ -321,3 +321,94 @@ button.delete-button:hover {
 .form-container h1 {
   color: #333;
 }
+
+
+/* ViewCreator styles */
+.view-creator-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.creator-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.creator-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.view-creator-container .creator-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.creator-name {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.creator-content {
+  text-align: center;
+}
+
+.creator-description {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.creator-link {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #646cff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.creator-link:hover {
+  background-color: #535bf2;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .view-creator-container {
+    background-color: #2a2a2a;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  }
+
+  .creator-name {
+    color: #f0f0f0;
+  }
+
+  .creator-description {
+    color: #d0d0d0;
+  }
+
+  .loading {
+    color: #b0b0b0;
+  }
+}

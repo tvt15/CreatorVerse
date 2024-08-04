@@ -20,16 +20,24 @@ const ViewCreator = () => {
   }, [id]);
 
   return (
-    <div>
+    <div className="view-creator-container">
       {creator ? (
-        <>
-          <h1>{creator.name}</h1>
-          <p>{creator.description}</p>
-          <a href={creator.url} target="_blank" rel="noopener noreferrer">Visit</a>
-          {creator.imageURL && <img src={creator.imageURL} alt={creator.name} />}
-        </>
+        <div className="creator-profile">
+          <div className="creator-header">
+            {creator.imageURL && (
+              <img src={creator.imageURL} alt={creator.name} className="creator-image" />
+            )}
+            <h1 className="creator-name">{creator.name}</h1>
+          </div>
+          <div className="creator-content">
+            <p className="creator-description">{creator.description}</p>
+            <a href={creator.url} target="_blank" rel="noopener noreferrer" className="creator-link">
+              Visit Creator's Page
+            </a>
+          </div>
+        </div>
       ) : (
-        <p>Loading...</p>
+        <p className="loading">Loading...</p>
       )}
     </div>
   );

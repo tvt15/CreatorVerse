@@ -25,7 +25,7 @@ const AddCreator = () => {
   };
 
   return (
-    <div>
+    <div className="form-container">
       <h1>Add New Creator</h1>
       <form onSubmit={handleSubmit}>
         <label>
@@ -41,10 +41,12 @@ const AddCreator = () => {
           <textarea name="description" value={formData.description} onChange={handleChange} required />
         </label>
         <label>
-          Image URL (optional):
+          Image URL:
           <input type="url" name="imageURL" value={formData.imageURL} onChange={handleChange} />
         </label>
-        <button type="submit">Add Creator</button>
+        <div className="button-group">
+          <button type="submit">Add Creator</button>
+        </div>
       </form>
     </div>
   );
