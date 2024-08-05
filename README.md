@@ -47,8 +47,8 @@ Describe any challenges encountered while building the app or any additional con
 I underestimated the time required for the task initially. Developing a web application presents significant challenges, particularly when managing multiple concurrent responsibilities.
 
 ## Future Scope:
--[]  **a Light-Dark theme toggle switch**
--[]  **Automatic profile picture parser**
+- [ ]  **a Light-Dark theme toggle switch**
+- [ ]  **Automatic profile picture parser**
 
 
 ## License
