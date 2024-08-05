@@ -35,7 +35,7 @@ Here's a walkthrough of implemented required features:
 👉🏿<img src='TVTsCreatorVerse-GoogleChrome2024-08-0514-24-31-ezgif.com-video-to-gif-converter.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  👉🏿 GIF tool here
+GIF created with ...  ezgif.com
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -47,7 +47,7 @@ Describe any challenges encountered while building the app or any additional con
 I underestimated the time required for the task initially. Developing a web application presents significant challenges, particularly when managing multiple concurrent responsibilities.
 ## License
 
-Copyright [👉🏿 yyyy] [👉🏿 name of copyright owner]
+Copyright [@2024] [Tanishq Todkar]
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
