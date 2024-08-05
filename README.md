@@ -44,7 +44,7 @@ GIF created with ...  👉🏿 GIF tool here
 ## Notes
 
 Describe any challenges encountered while building the app or any additional context you'd like to add.
-
+I underestimated the time required for the task initially. Developing a web application presents significant challenges, particularly when managing multiple concurrent responsibilities.
 ## License
 
 Copyright [👉🏿 yyyy] [👉🏿 name of copyright owner]
